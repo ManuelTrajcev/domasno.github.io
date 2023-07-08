@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Fitnesscook Homepage</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;0,800;1,200;1,300;1,400&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="TheFitnesscookBanner.png" alt="Logo" id="logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-times" onclick="hideMenu()" id="cross"></i>
+            <ul>
+                <li id="active"><a href="index.html">HOME PAGE</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="nutrition.html">NUTRITION</a></li>
+                <li><a href="workouttips.html">WORKOUT</a></li>
+                <li><a href="myjourney.html">MY JOURNEY</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div id="welcome">
+        <img src="TheFitnesscookLogo.png" alt="Logo">
+        <p>Welcome to The Fitnesscook's Web Site</p>
+        <button class="hero-btn" onclick="learnMore()">LEARN MORE</button>
+    </div>
+
+</section>
+
+<section id="main-part">
+    <div class="row">
+        <p>If you are looking for delicious recipes that also taste amazing, well you are lucky, because you are on
+            the right place!<br>
+            On this page you can find delicious recipes with great macros. I am always trying to get a balance between
+            taste and nutrients.
+            I am really into fitness: working out, running, counting calories and hitting a calorie/macro nutrient
+            goals, but I am not
+            a person who just eats food to hit the macros, also I want to enjoy every bite of food I take. So you can be
+            sure these nutritious meals also taste amazing!</p>
+    </div>
+    <p id="fg">Food Gallery</p>
+    <div class="row" id="food-gallery">
+        <img src="FoodGallery/IMG_20200812_124554.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20200812_124721.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20200904_134159.jpg" height="2631" width="2630" class="images"/>
+        <img src="FoodGallery/IMG_20200909_125407.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20200911_222405.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20200922_140442.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20200922_163951.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20200922_164536.jpg" height="3000" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210117_094940.jpg" height="3000" width="4000" class="images"/>
+        <img src="FoodGallery/IMG_20210422_122157.jpg" height="2495" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210604_213027.jpg" height="1974" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210611_090716.jpg" height="3171" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210611_090722.jpg" height="2696" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210703_194740.jpg" height="2217" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210722_080305.jpg" height="2456" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210722_080342.jpg" height="3383" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210728_080623.jpg" height="2671" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210728_170457.jpg" height="2621" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210818_223517.jpg" height="3281" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210823_190852.jpg" height="2401" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210827_170343.jpg" height="2688" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210829_092649.jpg" height="2587" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210913_115855.jpg" height="2594" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210918_135507.jpg" height="2961" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210918_135659_1.jpg" height="2417" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20210928_124409_1.jpg" height="3246" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20211109_124701.jpg" height="2873" width="3000"class="images"/>
+        <img src="FoodGallery/IMG_20211122_124414.jpg" height="2856" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20211208_215626.jpg" height="2694" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20220105_085142_1.jpg" height="3124" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20220507_083311.jpg" height="2506" width="3000" class="images"/>
+        <img src="FoodGallery/IMG_20220626_090018_1.jpg" height="2818" width="3000" class="images"/>
+    </div>
+</section>
+<section class="footer">
+    <span id="contact">CONTACT</span><br>
+    <div class="contact-me">
+        <i class="fa-brands fa-youtube"></i>
+        <span>Youtube: <a href="https://www.youtube.com/@thefitnesscook4063"> The Fitnescook</a></span><br>
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram: <a href="https://www.instagram.com/the_fitnesscook/?hl=en"> @the_fitnesscook</a></span><br>
+        <i class="fa-solid fa-square-envelope"></i>
+        <span>e-mail: <a href="mailto:manueltrajcev7@gmail.com"> manueltrajcev7@gmail.com</a></span><br>
+    </div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>

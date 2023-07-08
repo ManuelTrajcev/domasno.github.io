@@ -1,0 +1,718 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #EEF0F4;
+    color: #432000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER*/
+
+.header {
+    user-select: none;
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    background-color: rgba(225, 225, 225, 0.8);
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    position: relative;
+    width: 55vh;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #8d1515;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #8d1515;
+    display: block;
+    margin: auto;
+}
+
+
+li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    font-size: 2vh;
+    padding: 0 0.7vh;
+}
+
+i.fa, #cross {
+    display: none;
+}
+
+#welcome {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-color: #8e0708;
+    justify-content: center;
+    align-content: center;
+}
+
+#welcome img {
+    position: relative;
+    width: 11%;
+    margin: auto auto -60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#welcome p {
+    margin: auto;
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.hero-btn {
+    display: inline-block;
+    width: 20vh;
+    height: 5vh;
+    margin: -50px auto auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3vh;
+    font-weight: 500;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+.hero-btn:hover {
+    background-color: #7a7a7a;
+    color: #EEF0F4;
+
+}
+
+/*FOOTER*/
+
+.footer {
+    margin: 45px 0 0 0;
+    padding: 0;
+    background-color: #8d0708;
+    text-align: center;
+    color: #e1a1a1;
+}
+
+#contact {
+    font-size: 2.3vh;
+    color: white;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-me a {
+    font-size: 2vh;
+}
+
+.contact-me .fa {
+    visibility: visible;
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    font-size: 2vh;
+}
+
+/*MAIN PART*/
+
+#main-part {
+    display: inline-block;
+    opacity: 0;
+    transition: 2s;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row p {
+    margin: 3% auto;
+    text-align: center;
+    width: 70%;
+    font-size: 2vh;
+    color: black;
+}
+
+.column {
+    width: 50%;
+    height: 30vh;
+    background-color: #8d1515;
+}
+
+#fg {
+    margin: 20px 20px 20px 35px;
+    font-size: 3vh;
+    font-weight: 400;
+}
+
+#food-gallery {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.images {
+    width: 21%;
+    height: 21%;
+    padding: 30px;
+    backdrop-filter: blur(3px);
+}
+
+.images:hover {
+    opacity: 1;
+    transform: scale(1.35) translateY(-5%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+/*RECIPES*/
+
+#recipe-page {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recipe-el {
+    margin: 20px;
+    width: 100%;
+    border: 1px solid #8d1515;
+}
+
+
+a {
+    text-decoration: none;
+    color: #8d1515;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 3vh;
+}
+
+.expandable {
+    width: 0;
+    background: #fff;
+    overflow: hidden;
+    color: #000;
+    line-height: 50px;
+    transition: all 1s ease-in-out;
+    height: 0;
+}
+
+#nav.expandable:target {
+    height: 100px;
+}
+
+.expandable:target {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    padding: 1%;
+}
+
+#recipe-heading {
+    width: 110%;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    margin: 1vh auto 0 auto;
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 0 25% 1% 25%;
+    color: #565656;
+    width: 100%;
+    font-weight: 800;
+    border: 1px solid #565656;
+}
+
+#recipe-page img {
+    width: 50%;
+    height: 50%;
+    float: right;
+    margin: 5vh 5vh 0 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.expandable p {
+    margin: 1vh 4vh;
+    font-size: 2vh;
+}
+
+
+/*NUTRITION*/
+
+#nutrition-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nutrition-introduction {
+    width: 45%;
+    height: 30%;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgb(169, 48, 48);
+    color: black;
+    border: 1px solid black;
+    margin: 6vh auto;
+    padding: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    font-size: 2.5vh;
+    transition: 1s;
+}
+
+#nutrition-introduction:hover {
+    scale: 120%;
+    box-shadow: rgba(255, 0, 0, 0.62) 0 0 50px 20px;
+}
+
+.nutrition-item {
+    width: 40%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 5vh auto;
+    padding: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #432000;
+    text-align: justify;
+    transition: 1s;
+}
+
+.nutrition-item:hover {
+    scale: 130%;
+    color: black;
+    font-weight: 500;
+}
+
+#nutrition-page img {
+    width: 30%;
+    height: 30%;
+    margin: 1%;
+    box-shadow: 0 30px 40px rgba(54, 54, 54, 0.3);
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url(Nutrition/scale.jpg);
+    border-radius: 3vh;
+    transition: 1s;
+}
+
+#nutrition-page img:hover {
+    scale: 120%;
+}
+
+/*WORKOUT*/
+
+#workout-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 85%;
+    margin: 1% auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expandable-w {
+    margin-top: 1%;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    color: #000;
+    line-height: 50px;
+    transition: all 2s ease-in;
+    height: 0;
+    border: 1px solid #232323;
+    border-top: none;
+    text-align: justify;
+    font-size: 0;
+}
+
+#nav.expandable-w:target {
+    height: 100px;
+}
+
+.expandable-w:target {
+    height: 100%;
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    padding: 1%;
+}
+
+#workout-page a {
+    display: inline-block;
+    margin: 2vh auto 0 auto;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border: 0.2vh solid #232323;
+}
+
+.workout-item {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    margin-bottom: 2%;
+    margin-top: 0;
+    padding: 2vh;
+    box-shadow: rgba(255, 129, 129, 0.8) 0px 0px 20px 5px;
+    background-color: #a23737;
+    color: #ffffff;
+    text-align: center;
+    transition: 1s;
+}
+
+.workout-item:hover {
+    scale: 110%;
+    box-shadow: rgba(255, 0, 0, 0.62) 0 0 30px 20px;
+    font-weight: 500;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tips-bg {
+    margin-top: 2%;
+    display: block;
+    width: 100%;
+    height: 10vh;
+    padding: 2% 5%;
+    background-image: linear-gradient(to bottom, #eceef2 , #8e0708, #8d1515, #8e0708 , #eceef2);
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+    /*border-radius: 20px;*/
+    /*border: 1px solid black;*/
+}
+
+#tips {
+    margin: 2.5vh;
+    color: white;
+    font-size: 3.5vh;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: 2s;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: 2s;
+}
+
+
+/*MY JOURNEY*/
+
+#main-part-my-journey {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 85%;
+    justify-content: space-around;
+}
+
+#main-part-my-journey p {
+    width: 40%;
+    height: 30%;
+    border: 1px solid #8c1515;
+    margin: 2vh;
+    padding: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: justify;
+    transition: 1s;
+}
+
+#main-part-my-journey p:hover {
+    scale: 130%;
+    color: black;
+    font-weight: 500;
+}
+
+.cut img {
+    width: 15%;
+    height: 15%;
+    margin: 0;
+}
+
+#main-part-my-journey img {
+    width: 20%;
+    height: 20%;
+    margin: 5vh 10vh 5vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 1s;
+}
+
+#main-part-my-journey img:hover{
+    scale: 120%;
+}
+.cut {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+}
+
+
+/*MOBILE VERSION*/
+
+@media (max-width: 1000px) {
+
+    #logo {
+        width: 600px;
+    }
+
+    .nav-links ul li {
+        display: inline-block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: white;
+        height: 100vh;
+        width: 410px;
+        top: 0;
+        right: -400px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        font-size: 30px;
+    }
+
+    nav .fa, #cross {
+        display: block;
+        color: #8d1515;
+        margin: 10px;
+        padding: 20px;
+        font-size: 60px;
+        cursor: pointer;
+    }
+
+    #cross {
+        font-size: 40px;
+    }
+
+    .nav-links ul {
+        top: -20px;
+        padding: 0 30px;
+        margin-top: 5px;
+    }
+
+    #welcome {
+        height: 45vh;
+    }
+
+    #welcome img {
+        width: 300px;
+    }
+
+    #welcome p {
+        font-size: 70px;
+        margin: 65px auto;
+    }
+
+    .hero-btn {
+
+        width: 400px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    #food-gallery {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .images {
+        width: 90%;
+        height: 90%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .images:hover {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 1;
+    }
+
+    .footer {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #contact {
+        font-size: 3vh;
+        font-weight: 400;
+        margin-left: 1vh;
+    }
+
+    .contact-me {
+        flex-direction: column;
+        text-align: end;
+        font-size: 0.5vh;
+        margin-right: 1vh;
+    }
+
+    #recipe-page {
+        width: 100%;
+    }
+
+    #recipe-page a {
+        text-align: center;
+        font-size: 2.8vh;
+    }
+
+    .expandable {
+        font-size: 2.3vh;
+        width: 95%;
+    }
+
+    .expandable p {
+        margin: 2vh;
+    }
+
+    #recipe-page img {
+        margin: 1vh 1vh 0 0;
+    }
+
+    #recipe-heading {
+        width: 100%;
+
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    #nutrition-introduction {
+        font-size: 2vh;
+        width: 89%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+
+    #nutrition-page {
+        width: 95%;
+        justify-content: space-around;
+    }
+
+    .nutrition-item {
+        width: 100%;
+        padding: 1vh;
+        margin: 2vh;
+        font-size: 1.5vh;
+    }
+
+    #nutrition-page img {
+        width: 75%;
+        height: 75%;
+        margin: 2vh;
+    }
+
+    #workout-page {
+    }
+
+    .workout-item {
+        margin: 1vh -2vh;
+        width: 100%;
+        font-size: 2vh;
+        box-shadow: rgba(255, 129, 129, 0.8) 0px 0px 30px 10px;
+    }
+
+    .expandable-w {
+        font-size: 1.5vh;
+    }
+
+    .cut {
+        display: none; /*FIX THIS*/
+    }
+
+
+    #main-part-my-journey {
+        width: 95%;
+    }
+
+    #main-part-my-journey p {
+        font-size: 1.5vh;
+        width: 80%;
+    }
+
+    #main-part-my-journey img {
+        width: 70%;
+        height: 70%;
+    }
+
+    #tips-bg {
+        height: 14vh;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;;
+    }
+
+    #tips {
+        font-size: 2.5vh;
+        margin: 2.5vh 0; !important;
+    }
+
+}
+
+
+
+
